@@ -18,10 +18,12 @@ class _TxListState extends State<TxList> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-        shrinkWrap: true,
-        children: widget.transactionList.map((e) {
-          return TransactionItem(e, widget.onDelete);
-        }).toList());
+    return ListView.builder(
+      itemCount: widget.transactionList.length,
+      itemBuilder: (context, index) {
+        return TransactionItem(widget.transactionList[index], widget.onDelete);
+      },
+      shrinkWrap: true,
+    );
   }
 }
