@@ -153,10 +153,16 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text('CHART'),
             ),
             Expanded(
-                child: TxList(
-              transactionList: _txList,
-              onDelete: _deleteItem,
-            )),
+                child: _txList.isEmpty
+                    ? const Text('No Data',
+                        style: TextStyle(
+                            color: Colors.red,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold))
+                    : TxList(
+                        transactionList: _txList,
+                        onDelete: _deleteItem,
+                      )),
           ],
         ),
       ),
