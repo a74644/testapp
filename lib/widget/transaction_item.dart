@@ -4,7 +4,7 @@ import '/model/transaction.dart';
 
 class TransactionItem extends StatelessWidget {
   final Transaction tx;
-  final Function(Transaction) onDelete;
+  final Function onDelete;
   const TransactionItem(
     this.tx,
     this.onDelete, {

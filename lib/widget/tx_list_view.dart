@@ -4,7 +4,7 @@ import 'transaction_item.dart';
 
 class TxList extends StatefulWidget {
   final List<Transaction> transactionList;
-  final Function(Transaction) onDelete;
+  final Function onDelete;
   const TxList(
       {super.key, required this.transactionList, required this.onDelete});
 
